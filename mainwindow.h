@@ -35,8 +35,8 @@ private slots:
     void on_pushButtonAction_clicked();
 
     void on_comboBoxSensivity_currentTextChanged(const QString &arg1);
-
     void on_comboBoxInputRange_currentTextChanged(const QString &arg1);
+    void on_comboBoxFilter_currentTextChanged(const QString &arg1);
 
 private:
     Ui::MainWindow *ui;
