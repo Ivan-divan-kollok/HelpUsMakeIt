@@ -38,6 +38,26 @@ private slots:
     void on_comboBoxInputRange_currentTextChanged(const QString &arg1);
     void on_comboBoxFilter_currentTextChanged(const QString &arg1);
 
+    void on_comboBoxSignalStrength_currentTextChanged(const QString &arg1);
+
+    void on_comboBoxSignalInputZ_currentTextChanged(const QString &arg1);
+
+    void on_comboBoxWideReserveMode_currentTextChanged(const QString &arg1);
+
+    void on_comboBoxCloseReserveMode_currentTextChanged(const QString &arg1);
+
+    void on_comboBoxSignalInput_currentTextChanged(const QString &arg1);
+
+    void on_comboBoxTimeConstant_currentTextChanged(const QString &arg1);
+
+    void on_comboBoxBaud_currentTextChanged(const QString &arg1);
+
+    void on_comboBoxModel_currentTextChanged(const QString &arg1);
+
+    void on_comboBoxAutoCloseReserve_currentTextChanged(const QString &arg1);
+
+    void on_comboBoxDisplayData_currentTextChanged(const QString &arg1);
+
 private:
     Ui::MainWindow *ui;
 };
