@@ -12,7 +12,7 @@
 
 #include <string>
 
-#include "../ANGEL/Angel.h"
+#include "ANGEL/Angel.h"
 
 namespace Ui {
     class MainWindow;
@@ -36,7 +36,18 @@ private slots:
 
     void on_comboBoxSensivity_currentTextChanged(const QString &arg1);
     void on_comboBoxInputRange_currentTextChanged(const QString &arg1);
+
     void on_comboBoxFilter_currentTextChanged(const QString &arg1);
+
+    void on_comboBoxTimeConstant_currentTextChanged(const QString &arg1);
+
+    void on_comboBoxSignalInput_currentTextChanged(const QString &arg1);
+
+    void on_comboBoxWideReserveMode_currentTextChanged(const QString &arg1);
+
+    void on_comboBoxCloseReserveMode_currentTextChanged(const QString &arg1);
+
+    void on_comboBoxSignalInputZ_currentTextChanged(const QString &arg1);
 
 private:
     Ui::MainWindow *ui;

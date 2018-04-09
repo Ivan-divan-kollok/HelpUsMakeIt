@@ -34,8 +34,9 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->labelSensivity->hide();
     ui->comboBoxSensivity->hide();
 
-  /*  ui->labelFilter->hide();
-    ui->comboBoxFilter->hide();*/
+
+
+
 
 }
 
@@ -87,9 +88,8 @@ void MainWindow::on_pushButtonAction_clicked()
 
             this->listLoad = false;
         }
-         //get started
 
-
+        //started1
 
         if (this->lia->workWithFilter()) {
             this->listLoad = true;
@@ -103,10 +103,71 @@ void MainWindow::on_pushButtonAction_clicked()
             this->listLoad = false;
         }
 
+        if (this->lia->workWithTimeConstant()) {
+            this->listLoad = true;
 
-        // TO ADD
+            ui->labelTimeConstant->show();
+            ui->comboBoxTimeConstant->show();
+            ui->comboBoxTimeConstant->clear();
+            ui->comboBoxTimeConstant->addItems(this->lia->getTimeConstantList());
+            ui->comboBoxTimeConstant->setCurrentText(this->lia->getTimeConstant());
 
-        //ui->lineEditR->setText(QString::number(this->lia->getR()));
+            this->listLoad = false;
+        }
+
+        if (this->lia->workWithSignalInput()) {
+            this->listLoad = true;
+
+            ui->labelSignalInput->show();
+            ui->comboBoxSignalInput->show();
+            ui->comboBoxSignalInput->clear();
+            ui->comboBoxSignalInput->addItems(this->lia->getSignalInputList());
+            ui->comboBoxSignalInput->setCurrentText(this->lia->getSignalInput());
+
+            this->listLoad = false;
+        }
+
+        if (this->lia->workWithWideReserveMode()) {
+            this->listLoad = true;
+
+            ui->labelWideReserveMode->show();
+            ui->comboBoxWideReserveMode->show();
+            ui->comboBoxWideReserveMode->clear();
+            ui->comboBoxWideReserveMode->addItems(this->lia->getWideReserveModeList());
+            ui->comboBoxWideReserveMode->setCurrentText(this->lia->getWideReserveMode());
+
+            this->listLoad = false;
+        }
+
+        if (this->lia->workWithCloseReserveMode()) {
+            this->listLoad = true;
+
+            ui->labelCloseReserveMode->show();
+            ui->comboBoxCloseReserveMode->show();
+            ui->comboBoxCloseReserveMode->clear();
+            ui->comboBoxCloseReserveMode->addItems(this->lia->getCloseReserveModeList());
+            ui->comboBoxCloseReserveMode->setCurrentText(this->lia->getCloseReserveMode());
+
+            this->listLoad = false;
+        }
+
+        if (this->lia->workWithSignalInputZ()) {
+            this->listLoad = true;
+
+            ui->labelSignalInputZ->show();
+            ui->comboBoxSignalInputZ->show();
+            ui->comboBoxSignalInputZ->clear();
+            ui->comboBoxSignalInputZ->addItems(this->lia->getSignalInputZList());
+            ui->comboBoxSignalInputZ->setCurrentText(this->lia->getSignalInputZ());
+
+            this->listLoad = false;
+        }
+
+
+
+
+
+        ui->lineEditR->setText(QString::number(this->lia->getR()));
     } else {
         if (!this->lia->isActive())
             return;
@@ -124,11 +185,27 @@ void MainWindow::on_pushButtonAction_clicked()
         ui->labelInputRange->hide();
         ui->comboBoxInputRange->hide();
 
+        //started2
+
         ui->labelFilter->hide();
         ui->comboBoxFilter->hide();
+
+        ui->labelTimeConstant->hide();
+        ui->comboBoxTimeConstant->hide();
+
+        ui->labelSignalInput->hide();
+        ui->comboBoxSignalInput->hide();
+
+        ui->labelWideReserveMode->hide();
+        ui->comboBoxWideReserveMode->hide();
+
+        ui->labelCloseReserveMode->hide();
+        ui->comboBoxCloseReserveMode->hide();
+
+        ui->labelSignalInputZ->hide();
+        ui->comboBoxSignalInputZ->hide();
+
     }
-
-
 
     return;
 }
@@ -153,12 +230,63 @@ void MainWindow::on_comboBoxInputRange_currentTextChanged(const QString &arg1)
     return;
 }
 
+//started3
 void MainWindow::on_comboBoxFilter_currentTextChanged(const QString &arg1)
 {
     if (this->listLoad == true)
         return;
 
     this->lia->setFilter(arg1);
+
+    return;
+}
+
+void MainWindow::on_comboBoxTimeConstant_currentTextChanged(const QString &arg1)
+{
+    if (this->listLoad == true)
+        return;
+
+    this->lia->setTimeConstant(arg1);
+
+    return;
+}
+
+void MainWindow::on_comboBoxSignalInput_currentTextChanged(const QString &arg1)
+{
+    if (this->listLoad == true)
+        return;
+
+    this->lia->setSignalInput(arg1);
+
+    return;
+}
+
+void MainWindow::on_comboBoxWideReserveMode_currentTextChanged(const QString &arg1)
+{
+    if (this->listLoad == true)
+        return;
+
+    this->lia->setWideReserveMode(arg1);
+
+    return;
+}
+
+void MainWindow::on_comboBoxCloseReserveMode_currentTextChanged(const QString &arg1)
+{
+    if (this->listLoad == true)
+        return;
+
+    this->lia->setCloseReserveMode(arg1);
+
+    return;
+}
+
+void MainWindow::on_comboBoxSignalInputZ_currentTextChanged(const QString &arg1)
+{
+    if (this->listLoad == true)
+        return;
+
+    this->lia->setSignalInputZ(arg1);
 
     return;
 }

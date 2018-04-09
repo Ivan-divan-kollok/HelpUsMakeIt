@@ -25,22 +25,28 @@ QMAKE_CXXFLAGS += -isystem $$[QT_INSTALL_HEADERS]
 
 SOURCES += main.cpp \
         mainwindow.cpp \
-    ../ANGEL/Equipment/CommonFunctionsForSRS/SRS.cpp \
-    ../ANGEL/Equipment/LockInAmplifier/LockInAmplifier/LockInAmplifier.cpp \
-    ../ANGEL/Equipment/LockInAmplifier/SR830/SR830.cpp \
-    ../ANGEL/Equipment/LockInAmplifier/SR844/SR844.cpp \
-    ../ANGEL/Equipment/LockInAmplifier/SR865/SR865.cpp \
-    ../ANGEL/Functions/AllFunctions.cpp
+    ANGEL/Equipment/CommonFunctionsForSRS/SRS.cpp \
+    ANGEL/Equipment/LockInAmplifier/LockInAmplifier/LockInAmplifier.cpp \
+    ANGEL/Equipment/LockInAmplifier/SR830/SR830.cpp \
+    ANGEL/Equipment/LockInAmplifier/SR844/SR844.cpp \
+    ANGEL/Equipment/LockInAmplifier/SR865/SR865.cpp \
+    ANGEL/Functions/AllFunctions.cpp
 
 HEADERS += mainwindow.h \
-    ../ANGEL/Equipment/CommonFunctionsForSRS/SRS.h \
-    ../ANGEL/Equipment/LockInAmplifier/LockInAmplifier/LockInAmplifier.h \
-    ../ANGEL/Equipment/LockInAmplifier/SR830/SR830.h \
-    ../ANGEL/Equipment/LockInAmplifier/SR844/SR844.h \
-    ../ANGEL/Equipment/LockInAmplifier/SR865/SR865.h \
-    ../ANGEL/Equipment/LockInAmplifier/AllLockInAmplifiers.h \
-    ../ANGEL/Equipment/AllEquipment.h \
-    ../ANGEL/Functions/AllFunctions.h \
-    ../ANGEL/Angel.h
+    ANGEL/Equipment/CommonFunctionsForSRS/SRS.h \
+    ANGEL/Equipment/LockInAmplifier/LockInAmplifier/LockInAmplifier.h \
+    ANGEL/Equipment/LockInAmplifier/SR830/SR830.h \
+    ANGEL/Equipment/LockInAmplifier/SR844/SR844.h \
+    ANGEL/Equipment/LockInAmplifier/SR865/SR865.h \
+    ANGEL/Equipment/LockInAmplifier/AllLockInAmplifiers.h \
+    ANGEL/Equipment/AllEquipment.h \
+    ANGEL/Functions/AllFunctions.h \
+    ANGEL/Angel.h
 
 FORMS += mainwindow.ui
+
+DISTFILES += \
+    ANGEL/Equipment/LockInAmplifier/SR830/Manuals/SR830m.pdf \
+    ANGEL/Equipment/LockInAmplifier/SR844/Manuals/SR844m.pdf \
+    ANGEL/Equipment/LockInAmplifier/SR865/Manuals/SR865Am.pdf \
+    ANGEL/Equipment/LockInAmplifier/SR865/Manuals/SR865m.pdf
