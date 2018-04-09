@@ -103,124 +103,10 @@ void MainWindow::on_pushButtonAction_clicked()
             this->listLoad = false;
         }
 
-        if (this->lia->workWithTimeConstant()) {
-            this->listLoad = true;
-
-            ui->labelTimeConstant->show();
-            ui->comboBoxTimeConstant->show();
-            ui->comboBoxTimeConstant->clear();
-            ui->comboBoxTimeConstant->addItems(this->lia->getTimeConstantList());
-            ui->comboBoxTimeConstant->setCurrentText(this->lia->getTimeConstant());
-
-            this->listLoad = false;
-        }
-
-        if (this->lia->workWithCloseReserveMode()) {
-            this->listLoad = true;
-
-            ui->labelCloseReserveMode->show();
-            ui->comboBoxCloseReserveMode->show();
-            ui->comboBoxCloseReserveMode->clear();
-            ui->comboBoxCloseReserveMode->addItems(this->lia->getCloseReserveModeList());
-            ui->comboBoxCloseReserveMode->setCurrentText(this->lia->getCloseReserveMode());
-
-
-            this->listLoad = false;
-        }
-
-
-        if (this->lia->workWithWideReserveMode()) {
-            this->listLoad = true;
-
-            ui->labelWideReserveMode->show();
-            ui->comboBoxWideReserveMode->show();
-            ui->comboBoxWideReserveMode->clear();
-            ui->comboBoxWideReserveMode->addItems(this->lia->getWideReserveModeList());
-            ui->comboBoxWideReserveMode->setCurrentText(this->lia->getWideReserveMode());
-
-            this->listLoad = false;
-        }
-
-        if (this->lia->workWithSignalInput()) {
-            this->listLoad = true;
-
-            ui->labelSignalInput->show();
-            ui->comboBoxSignalInput->show();
-            ui->comboBoxSignalInput->clear();
-            ui->comboBoxSignalInput->addItems(this->lia->getSignalInputList());
-            ui->comboBoxSignalInput->setCurrentText(this->lia->getSignalInput());
-
-            this->listLoad = false;
-        }
-
-        if (this->lia->workWithSignalInputZ()) {
-            this->listLoad = true;
-
-            ui->labelSignalInputZ->show();
-            ui->comboBoxSignalInputZ->show();
-            ui->comboBoxSignalInputZ->clear();
-            ui->comboBoxSignalInputZ->addItems(this->lia->getSignalInputZList());
-            ui->comboBoxSignalInputZ->setCurrentText(this->lia->getSignalInputZ());
-
-            this->listLoad = false;
-        }
-
-        if (this->lia->workWithSignalStrength()) {
-            this->listLoad = true;
-
-            ui->labelSignalStrength->show();
-            ui->comboBoxSignalStrength->show();
-            ui->comboBoxSignalStrength->clear();
-//            ui->comboBoxSignalStrength->addItem(this->lia->getSignalStrength());
-//            ui->comboBoxSignalStrength->setCurrentText(this->lia->getSignalStrength());
-
-            this->listLoad = false;
-        }
-
 
         // TO ADD
 
         //ui->lineEditR->setText(QString::number(this->lia->getR()));
-
-        //new one!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-        /*if (this->lia->workWithAutoCloseReserve()) {
-            this->listLoad = true;
-
-            ui->labelAutoCloseReserve->show();
-            ui->comboBoxAutoCloseReserve->show();
-            ui->comboBoxAutoCloseReserve->clear();
-            ui->comboBoxAutoCloseReserve->addItems(this->lia->getA());
-            ui->comboBoxAutoCloseReserve->setCurrentText(this->lia->getSignalInputZ());
-
-            this->listLoad = false;
-        }*/
-
-        /*if (this->lia->workWithDisplayData()) {
-            this->listLoad = true;
-
-            ui->labelDisplayData->show();
-            ui->comboBoxDisplayData->show();
-            ui->comboBoxDisplayData->clear();
-            ui->comboBoxDisplayData->addItems(this->lia->getDa());
-            ui->comboBoxDisplayData->setCurrentText(this->lia->getSignalInputZ());
-
-            this->listLoad = false;
-        }*/
-
-        if (this->lia->workWithSh()) {
-            this->listLoad = true;
-
-            ui->labelSignalStrength->show();
-            ui->comboBoxSignalStrength->show();
-            ui->comboBoxSignalStrength->clear();
-//            ui->comboBoxSignalStrength->addItem(this->lia->getSignalStrength());
-//            ui->comboBoxSignalStrength->setCurrentText(this->lia->getSignalStrength());
-
-            this->listLoad = false;
-        }
-
-
     } else {
         if (!this->lia->isActive())
             return;
@@ -238,33 +124,8 @@ void MainWindow::on_pushButtonAction_clicked()
         ui->labelInputRange->hide();
         ui->comboBoxInputRange->hide();
 
-        ui->labelTimeConstant->hide();
-        ui->comboBoxTimeConstant->hide();
-
         ui->labelFilter->hide();
         ui->comboBoxFilter->hide();
-
-        ui->labelCloseReserveMode->hide();
-        ui->comboBoxCloseReserveMode->hide();
-
-        ui->labelWideReserveMode->hide();
-        ui->comboBoxWideReserveMode->hide();
-
-        ui->labelSignalInput->hide();
-        ui->comboBoxSignalInput->hide();
-
-        ui->labelSignalInputZ->hide();
-        ui->comboBoxSignalInputZ->hide();
-
-        ui->labelSignalStrength->hide();
-        ui->comboBoxSignalStrength->hide();
-
-        ui->labelAutoCloseReserve->hide();
-        ui->comboBoxAutoCloseReserve->hide();
-
-        ui->labelDisplayData->hide();
-        ui->comboBoxDisplayData->hide();
-
     }
 
 
@@ -292,85 +153,6 @@ void MainWindow::on_comboBoxInputRange_currentTextChanged(const QString &arg1)
     return;
 }
 
-
-//нужно делать через форму добавить слот в нарисованном окошке!!!
-
-void MainWindow::on_comboBoxWideReserveMode_currentTextChanged(const QString &arg1)
-{
-    if (this->listLoad == true)
-        return;
-
-    this->lia->setWideReserveMode(arg1);
-
-    return;
-}
-
-void MainWindow::on_comboBoxCloseReserveMode_currentTextChanged(const QString &arg1)
-{
-    if (this->listLoad == true)
-        return;
-
-    this->lia->setCloseReserveMode(arg1);
-
-    return;
-}
-
-void MainWindow::on_comboBoxSignalInput_currentTextChanged(const QString &arg1)
-{
-    if (this->listLoad == true)
-        return;
-
-    this->lia->setSignalInput(arg1);
-
-    return;
-}
-
-void MainWindow::on_comboBoxSignalInputZ_currentTextChanged(const QString &arg1)
-{
-    if (this->listLoad == true)
-        return;
-
-    this->lia->setSignalInputZ(arg1);
-
-    return;
-}
-/*WTF????
-void MainWindow::on_comboBoxSignalStrength_currentTextChanged(const QString &arg1)
-{
-    if (this->listLoad == true)
-        return;
-
-    this->lia->setS(arg1);
-
-    return;
-}*/
-
-void MainWindow::on_comboBoxTimeConstant_currentTextChanged(const QString &arg1)
-{
-    if (this->listLoad == true)
-        return;
-
-    this->lia->setTimeConstant(arg1);
-
-    return;
-}
-/*
-void MainWindow::on_comboBoxBaud_currentTextChanged(const QString &arg1)
-{
-
-}*/
-/*
-void MainWindow::on_comboBoxModel_currentTextChanged(const QString &arg1)
-{
-    if (this->listLoad == true)
-        return;
-
-    this->lia->set(arg1);
-
-    return;
-}
-*/
-
 void MainWindow::on_comboBoxFilter_currentTextChanged(const QString &arg1)
 {
     if (this->listLoad == true)
@@ -380,24 +162,3 @@ void MainWindow::on_comboBoxFilter_currentTextChanged(const QString &arg1)
 
     return;
 }
-
-/*void MainWindow::on_comboBoxAutoCloseReserve_currentTextChanged(const QString &arg1)
-{
-    if (this->listLoad == true)
-        return;
-
-    this->lia->setA(arg1);
-
-    return;
-}
-*/
-void MainWindow::on_comboBoxDisplayData_currentTextChanged(const QString &arg1)
-{
-    if (this->listLoad == true)
-        return;
-
-    this->lia->setDisplayData(arg1);
-
-    return;
-}
-
