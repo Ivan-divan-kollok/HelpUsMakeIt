@@ -33,11 +33,6 @@ MainWindow::MainWindow(QWidget *parent) :
 
     ui->labelSensivity->hide();
     ui->comboBoxSensivity->hide();
-
-
-
-
-
 }
 
 MainWindow::~MainWindow()
@@ -58,12 +53,12 @@ void MainWindow::on_pushButtonAction_clicked()
 
         ui->pushButtonAction->setText("Disconnect");
 
-        if (this->lia->getSR865()->getSerial()->baudRate() == 9600)
-            ui->comboBoxBaud->setCurrentText("9600");
-        if (this->lia->getSR865()->getSerial()->baudRate() == 19200)
-            ui->comboBoxBaud->setCurrentText("19200");
-        if (this->lia->getSR865()->getSerial()->baudRate() == 38400)
-            ui->comboBoxBaud->setCurrentText("38400");
+//        if (this->lia->getSR865()->getSerial()->baudRate() == 9600)
+//            ui->comboBoxBaud->setCurrentText("9600");
+//        if (this->lia->getSR865()->getSerial()->baudRate() == 19200)
+//            ui->comboBoxBaud->setCurrentText("19200");
+//        if (this->lia->getSR865()->getSerial()->baudRate() == 38400)
+//            ui->comboBoxBaud->setCurrentText("38400");
 
         if (this->lia->workWithSensivity()) {
             this->listLoad = true;

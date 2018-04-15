@@ -17,8 +17,8 @@
    <widget class="QWidget" name="layoutWidget_5">
     <property name="geometry">
      <rect>
-      <x>170</x>
-      <y>40</y>
+      <x>210</x>
+      <y>220</y>
       <width>120</width>
       <height>22</height>
      </rect>
@@ -255,7 +255,7 @@
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>200</x>
+      <x>10</x>
       <y>190</y>
       <width>143</width>
       <height>22</height>
@@ -277,8 +277,8 @@
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>240</y>
+      <x>40</x>
+      <y>250</y>
       <width>131</width>
       <height>22</height>
      </rect>
@@ -296,11 +296,11 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>210</x>
-      <y>240</y>
+      <x>30</x>
+      <y>270</y>
       <width>167</width>
       <height>22</height>
      </rect>
@@ -318,11 +318,11 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>10</y>
+      <x>210</x>
+      <y>200</y>
       <width>169</width>
       <height>22</height>
      </rect>
@@ -340,11 +340,11 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>350</x>
-      <y>60</y>
+      <x>10</x>
+      <y>220</y>
       <width>137</width>
       <height>22</height>
      </rect>
