@@ -158,6 +158,41 @@ void MainWindow::on_pushButtonAction_clicked()
             this->listLoad = false;
         }
 
+        if (this->lia->workWithReferenceSource()) {
+            this->listLoad = true;
+
+            ui->labelReferenceSource->show();
+            ui->comboBoxReferenceSource->show();
+            ui->comboBoxReferenceSource->clear();
+            ui->comboBoxReferenceSource->addItems(this->lia->getReferenceSourceList());
+            ui->comboBoxReferenceSource->setCurrentText(this->lia->getReferenceSource());
+
+            this->listLoad = false;
+        }
+
+        if (this->lia->workWithReferenceTriggerMode()) {
+            this->listLoad = true;
+
+            ui->labelReferenceTriggerMode->show();
+            ui->comboBoxReferenceTriggerMode->show();
+            ui->comboBoxReferenceTriggerMode->clear();
+            ui->comboBoxReferenceTriggerMode->addItems(this->lia->getReferenceTriggerModeList());
+            ui->comboBoxReferenceTriggerMode->setCurrentText(this->lia->getReferenceTriggerMode());
+
+            this->listLoad = false;
+        }
+
+        if (this->lia->workWithReferenceTriggerOutputZ()) {
+            this->listLoad = true;
+
+            ui->labelReferenceTriggerOutputZ->show();
+            ui->comboBoxReferenceTriggerOutputZ->show();
+            ui->comboBoxReferenceTriggerOutputZ->clear();
+            ui->comboBoxReferenceTriggerOutputZ->addItems(this->lia->getReferenceTriggerOutputZList());
+            ui->comboBoxReferenceTriggerOutputZ->setCurrentText(this->lia->getReferenceTriggerOutputZ());
+
+            this->listLoad = false;
+        }
 
 
 
@@ -199,6 +234,15 @@ void MainWindow::on_pushButtonAction_clicked()
 
         ui->labelSignalInputZ->hide();
         ui->comboBoxSignalInputZ->hide();
+
+        ui->labelReferenceSource->hide();
+        ui->comboBoxReferenceSource->hide();
+
+        ui->labelReferenceTriggerMode->hide();
+        ui->comboBoxReferenceTriggerMode->hide();
+
+        ui->labelReferenceTriggerOutputZ->hide();
+        ui->comboBoxReferenceTriggerOutputZ->hide();
 
     }
 
@@ -282,6 +326,36 @@ void MainWindow::on_comboBoxSignalInputZ_currentTextChanged(const QString &arg1)
         return;
 
     this->lia->setSignalInputZ(arg1);
+
+    return;
+}
+
+void MainWindow::on_comboBoxReferenceSource_currentTextChanged(const QString &arg1)
+{
+    if (this->listLoad == true)
+        return;
+
+    this->lia->setReferenceSource(arg1);
+
+    return;
+}
+
+void MainWindow::on_comboBoxReferenceTriggerMode_currentTextChanged(const QString &arg1)
+{
+    if (this->listLoad == true)
+        return;
+
+    this->lia->setReferenceTriggerMode(arg1);
+
+    return;
+}
+
+void MainWindow::on_comboBoxReferenceTriggerOutputZ_currentTextChanged(const QString &arg1)
+{
+    if (this->listLoad == true)
+        return;
+
+    this->lia->setReferenceTriggerOutputZ(arg1);
 
     return;
 }

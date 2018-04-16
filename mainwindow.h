@@ -49,6 +49,12 @@ private slots:
 
     void on_comboBoxSignalInputZ_currentTextChanged(const QString &arg1);
 
+    void on_comboBoxReferenceSource_currentTextChanged(const QString &arg1);
+
+    void on_comboBoxReferenceTriggerMode_currentTextChanged(const QString &arg1);
+
+    void on_comboBoxReferenceTriggerOutputZ_currentTextChanged(const QString &arg1);
+
 private:
     Ui::MainWindow *ui;
 };
