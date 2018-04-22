@@ -6,402 +6,419 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>403</width>
-    <height>381</height>
+    <width>613</width>
+    <height>323</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QWidget" name="layoutWidget">
+   <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>190</x>
       <y>10</y>
-      <width>154</width>
-      <height>169</height>
+      <width>181</width>
+      <height>181</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout_2">
-     <item>
-      <layout class="QHBoxLayout" name="horizontalLayout">
-       <item>
-        <widget class="QComboBox" name="comboBoxCOM"/>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButtonAction">
-         <property name="text">
-          <string>Connect</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <layout class="QVBoxLayout" name="verticalLayout">
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_2">
-         <item>
-          <widget class="QLabel" name="label">
-           <property name="text">
-            <string>BAUD</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QComboBox" name="comboBoxBaud">
-           <property name="enabled">
-            <bool>false</bool>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_3">
-         <item>
-          <widget class="QLabel" name="label_2">
-           <property name="text">
-            <string>DATA</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QComboBox" name="comboBoxData">
-           <property name="enabled">
-            <bool>false</bool>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_4">
-         <item>
-          <widget class="QLabel" name="label_3">
-           <property name="text">
-            <string>PARITY</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QComboBox" name="comboBoxParity">
-           <property name="enabled">
-            <bool>false</bool>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_5">
-         <item>
-          <widget class="QLabel" name="label_4">
-           <property name="text">
-            <string>STOP</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QComboBox" name="comboBoxStop">
-           <property name="enabled">
-            <bool>false</bool>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_6">
-         <item>
-          <widget class="QLabel" name="label_5">
-           <property name="text">
-            <string>FlowControl</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QComboBox" name="comboBoxFlowControl">
-           <property name="enabled">
-            <bool>false</bool>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-      </layout>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QSplitter" name="splitter_2">
-    <property name="geometry">
-     <rect>
-      <x>170</x>
-      <y>10</y>
-      <width>148</width>
-      <height>44</height>
-     </rect>
+    <property name="title">
+     <string>SIGNAL</string>
     </property>
-    <property name="orientation">
-     <enum>Qt::Vertical</enum>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
-    <widget class="QWidget" name="layoutWidget">
-     <layout class="QHBoxLayout" name="horizontalLayout_7">
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
+    <widget class="QWidget" name="">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>20</y>
+       <width>147</width>
+       <height>154</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_10">
       <item>
-       <widget class="QLabel" name="label_6">
-        <property name="text">
-         <string>Model</string>
-        </property>
-       </widget>
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <widget class="QLabel" name="labelSensivity">
+          <property name="text">
+           <string>Sensivity</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelTimeConstant">
+          <property name="text">
+           <string>TimeConstant</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelFilter">
+          <property name="text">
+           <string>Filter</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelSignalInput">
+          <property name="text">
+           <string>SignalInput</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelSignalInputZ">
+          <property name="text">
+           <string>SignalInputZ</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelInputRange">
+          <property name="text">
+           <string>InputRange</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </item>
       <item>
-       <widget class="QComboBox" name="comboBoxModel">
-        <property name="enabled">
-         <bool>false</bool>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-    <widget class="QWidget" name="layoutWidget">
-     <layout class="QHBoxLayout" name="horizontalLayout_9">
-      <item>
-       <widget class="QLabel" name="labelR">
-        <property name="text">
-         <string>R</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="lineEditR">
-        <property name="enabled">
-         <bool>false</bool>
-        </property>
-       </widget>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QComboBox" name="comboBoxSensivity"/>
+        </item>
+        <item>
+         <widget class="QComboBox" name="comboBoxTimeConstant"/>
+        </item>
+        <item>
+         <widget class="QComboBox" name="comboBoxFilter"/>
+        </item>
+        <item>
+         <widget class="QComboBox" name="comboBoxSignalInput"/>
+        </item>
+        <item>
+         <widget class="QComboBox" name="comboBoxSignalInputZ"/>
+        </item>
+        <item>
+         <widget class="QComboBox" name="comboBoxInputRange"/>
+        </item>
+       </layout>
       </item>
      </layout>
     </widget>
    </widget>
-   <widget class="QWidget" name="layoutWidget">
+   <widget class="QGroupBox" name="groupBox_2">
     <property name="geometry">
      <rect>
-      <x>170</x>
-      <y>60</y>
-      <width>205</width>
-      <height>76</height>
+      <x>370</x>
+      <y>10</y>
+      <width>221</width>
+      <height>161</height>
      </rect>
     </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_17">
-     <item>
-      <layout class="QVBoxLayout" name="verticalLayout_4">
-       <item>
-        <widget class="QLabel" name="labelReferenceSource">
-         <property name="text">
-          <string>ReferenceSource</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="labelReferenceTriggerMode">
-         <property name="text">
-          <string>ReferenceTriggerMode</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="labelReferenceTriggerOutputZ">
-         <property name="text">
-          <string>ReferenceTriggerOutputZ</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <layout class="QVBoxLayout" name="verticalLayout_3">
-       <item>
-        <widget class="QComboBox" name="comboBoxReferenceSource"/>
-       </item>
-       <item>
-        <widget class="QComboBox" name="comboBoxReferenceTriggerMode"/>
-       </item>
-       <item>
-        <widget class="QComboBox" name="comboBoxReferenceTriggerOutputZ"/>
-       </item>
-      </layout>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="layoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>190</y>
-      <width>149</width>
-      <height>76</height>
-     </rect>
+    <property name="title">
+     <string>REFERENCE</string>
     </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_18">
-     <item>
-      <layout class="QVBoxLayout" name="verticalLayout_5">
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_8">
-         <item>
-          <widget class="QLabel" name="labelSensivity">
-           <property name="text">
-            <string>Sensivity</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_11">
-         <item>
-          <widget class="QLabel" name="labelFilter">
-           <property name="text">
-            <string>Filter</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_12">
-         <item>
-          <widget class="QLabel" name="labelTimeConstant">
-           <property name="text">
-            <string>TimeConstant</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <layout class="QVBoxLayout" name="verticalLayout_6">
-       <item>
-        <widget class="QComboBox" name="comboBoxSensivity"/>
-       </item>
-       <item>
-        <widget class="QComboBox" name="comboBoxFilter"/>
-       </item>
-       <item>
-        <widget class="QComboBox" name="comboBoxTimeConstant"/>
-       </item>
-      </layout>
-     </item>
-    </layout>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <widget class="QWidget" name="">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>205</width>
+       <height>128</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_8">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_6">
+        <item>
+         <widget class="QLabel" name="labelCloseReserveMode">
+          <property name="text">
+           <string>CloseReserveMode</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelWideReserveMode">
+          <property name="text">
+           <string>WideReserveMode</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelReferenceSource">
+          <property name="text">
+           <string>ReferenceSource</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelReferenceTriggerMode">
+          <property name="text">
+           <string>ReferenceTriggerMode</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelReferenceTriggerOutputZ">
+          <property name="text">
+           <string>ReferenceTriggerOutputZ</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <item>
+         <widget class="QComboBox" name="comboBoxCloseReserveMode"/>
+        </item>
+        <item>
+         <widget class="QComboBox" name="comboBoxWideReserveMode"/>
+        </item>
+        <item>
+         <widget class="QComboBox" name="comboBoxReferenceSource"/>
+        </item>
+        <item>
+         <widget class="QComboBox" name="comboBoxReferenceTriggerMode"/>
+        </item>
+        <item>
+         <widget class="QComboBox" name="comboBoxReferenceTriggerOutputZ"/>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
    </widget>
-   <widget class="QWidget" name="layoutWidget">
+   <widget class="QGroupBox" name="groupBox_3">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>270</y>
-      <width>141</width>
-      <height>50</height>
+      <y>10</y>
+      <width>181</width>
+      <height>251</height>
      </rect>
     </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_19">
-     <item>
-      <layout class="QVBoxLayout" name="verticalLayout_7">
-       <item>
-        <widget class="QLabel" name="labelSignalInputZ">
-         <property name="text">
-          <string>SignalInputZ</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="labelSignalInput">
-         <property name="text">
-          <string>SignalInput</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <layout class="QVBoxLayout" name="verticalLayout_8">
-       <item>
-        <widget class="QComboBox" name="comboBoxSignalInputZ"/>
-       </item>
-       <item>
-        <widget class="QComboBox" name="comboBoxSignalInput"/>
-       </item>
-      </layout>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="layoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>170</x>
-      <y>160</y>
-      <width>173</width>
-      <height>76</height>
-     </rect>
+    <property name="title">
+     <string>LOCK-IN-AMPLIFIER</string>
     </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_10">
-     <item>
-      <layout class="QVBoxLayout" name="verticalLayout_9">
-       <item>
-        <widget class="QLabel" name="labelInputRange">
-         <property name="text">
-          <string>InputRange</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_14">
-         <item>
-          <widget class="QLabel" name="labelWideReserveMode">
-           <property name="text">
-            <string>WideReserveMode</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <widget class="QLabel" name="labelCloseReserveMode">
-         <property name="text">
-          <string>CloseReserveMode</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <layout class="QVBoxLayout" name="verticalLayout_10">
-       <item>
-        <widget class="QComboBox" name="comboBoxInputRange"/>
-       </item>
-       <item>
-        <widget class="QComboBox" name="comboBoxWideReserveMode"/>
-       </item>
-       <item>
-        <widget class="QComboBox" name="comboBoxCloseReserveMode"/>
-       </item>
-      </layout>
-     </item>
-    </layout>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <widget class="QWidget" name="">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>161</width>
+       <height>209</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QComboBox" name="comboBoxCOM"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>BAUD</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string>DATA</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>PARITY</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_4">
+          <property name="text">
+           <string>STOP</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_5">
+          <property name="text">
+           <string>FlowControl</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_6">
+          <property name="text">
+           <string>Model</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelR">
+          <property name="text">
+           <string>R</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_7">
+        <item>
+         <widget class="QPushButton" name="pushButtonAction">
+          <property name="text">
+           <string>Connect</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="comboBoxBaud">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="comboBoxData">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="comboBoxParity">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="comboBoxStop">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="comboBoxFlowControl">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="comboBoxModel">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEditR">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
    </widget>
-   <zorder>splitter_2</zorder>
-   <zorder>layoutWidget</zorder>
-   <zorder>layoutWidget</zorder>
-   <zorder>layoutWidget</zorder>
-   <zorder>layoutWidget</zorder>
-   <zorder>layoutWidget</zorder>
+   <zorder>comboBoxReferenceSource</zorder>
+   <zorder>labelReferenceSource</zorder>
+   <zorder>comboBoxReferenceTriggerMode</zorder>
+   <zorder>labelReferenceTriggerMode</zorder>
+   <zorder>labelReferenceTriggerOutputZ</zorder>
+   <zorder>comboBoxReferenceTriggerOutputZ</zorder>
+   <zorder>comboBoxInputRange</zorder>
+   <zorder>labelInputRange</zorder>
+   <zorder>labelWideReserveMode</zorder>
+   <zorder>comboBoxWideReserveMode</zorder>
+   <zorder>labelCloseReserveMode</zorder>
+   <zorder>comboBoxCloseReserveMode</zorder>
+   <zorder>labelSensivity</zorder>
+   <zorder>comboBoxSensivity</zorder>
+   <zorder>comboBoxFilter</zorder>
+   <zorder>labelFilter</zorder>
+   <zorder>comboBoxTimeConstant</zorder>
+   <zorder>labelTimeConstant</zorder>
+   <zorder>comboBoxSignalInputZ</zorder>
+   <zorder>labelSignalInputZ</zorder>
+   <zorder>labelSignalInput</zorder>
+   <zorder>comboBoxSignalInput</zorder>
+   <zorder>comboBoxSignalInput</zorder>
+   <zorder>labelSignalInput</zorder>
+   <zorder>labelSignalInputZ</zorder>
+   <zorder>comboBoxSignalInputZ</zorder>
+   <zorder>labelInputRange</zorder>
+   <zorder>comboBoxInputRange</zorder>
+   <zorder>labelTimeConstant</zorder>
+   <zorder>comboBoxTimeConstant</zorder>
+   <zorder>labelFilter</zorder>
+   <zorder>comboBoxFilter</zorder>
+   <zorder>labelSensivity</zorder>
+   <zorder>comboBoxSensivity</zorder>
+   <zorder>labelSignalInput</zorder>
+   <zorder>comboBoxSignalInput</zorder>
+   <zorder>groupBox</zorder>
+   <zorder>labelCloseReserveMode</zorder>
+   <zorder>comboBoxCloseReserveMode</zorder>
+   <zorder>labelWideReserveMode</zorder>
+   <zorder>comboBoxWideReserveMode</zorder>
+   <zorder>labelReferenceSource</zorder>
+   <zorder>comboBoxReferenceSource</zorder>
+   <zorder>labelReferenceTriggerMode</zorder>
+   <zorder>comboBoxReferenceTriggerMode</zorder>
+   <zorder>labelReferenceTriggerOutputZ</zorder>
+   <zorder>comboBoxReferenceTriggerOutputZ</zorder>
+   <zorder>groupBox_2</zorder>
+   <zorder>lineEditR</zorder>
+   <zorder>labelR</zorder>
+   <zorder>lineEditR</zorder>
+   <zorder>comboBoxModel</zorder>
+   <zorder>label_6</zorder>
+   <zorder>comboBoxFlowControl</zorder>
+   <zorder>label_5</zorder>
+   <zorder>comboBoxStop</zorder>
+   <zorder>label_4</zorder>
+   <zorder>label_3</zorder>
+   <zorder>comboBoxParity</zorder>
+   <zorder>label_2</zorder>
+   <zorder>comboBoxData</zorder>
+   <zorder>label</zorder>
+   <zorder>comboBoxBaud</zorder>
+   <zorder>pushButtonAction</zorder>
+   <zorder>comboBoxCOM</zorder>
+   <zorder>groupBox_3</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>403</width>
+     <width>613</width>
      <height>21</height>
     </rect>
    </property>
